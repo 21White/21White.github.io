@@ -1,11 +1,11 @@
 cv:
   name: 陈子扬
-  label: 中国科学院自动化研究所 硕士研究生
+  label: 中国科学院 硕士研究生
   email: ziyangchen21@m.fudan.edu.cn, chenziyang251@mails.ucas.ac.cn
   website: https://github.com/21White
   summary: >
-    中国科学院自动化研究所计算机科学与技术硕士研究生，研究方向为多模态学习与音频理解。
-    本科毕业于复旦大学信息与通信工程专业。
+    中国科学院计算机科学与技术硕士研究生，研究方向为多模态学习与音频理解。
+    本科毕业于复旦大学通信工程专业。
 
   social_networks:
     - network: GitHub
@@ -15,9 +15,9 @@ cv:
   # 这样中英文两份 CV 共用同一套渲染模板。
   sections:
     Education:
-      - institution: 中国科学院自动化研究所
+      - institution: 中国科学院
         location: 北京
-        url: http://www.ia.cas.cn/
+        url: https://www.cas.cn/
         area: 计算机科学与技术
         studyType: 硕士
         start_date: 2025-09
@@ -26,7 +26,7 @@ cv:
       - institution: 复旦大学
         location: 上海
         url: https://www.fudan.edu.cn/
-        area: 信息与通信工程
+        area: 通信工程
         studyType: 本科
         start_date: 2021-09
         end_date: 2025-06

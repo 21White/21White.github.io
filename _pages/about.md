@@ -4,14 +4,14 @@ title: about
 permalink: /
 lang: en
 lang_alt: /zh/
-subtitle: MSc student at the <a href='http://www.ia.cas.cn/'>Institute of Automation, Chinese Academy of Sciences</a>.
+subtitle: MSc student at the <a href='https://www.cas.cn/'>Chinese Academy of Sciences</a>.
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Institute of Automation, CAS</p>
+    <p>Chinese Academy of Sciences</p>
     <p>Beijing, China</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
@@ -28,9 +28,9 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am an MSc student in Computer Science and Technology at the Institute of
-Automation, Chinese Academy of Sciences. Before that I received my BSc in
-Information and Communication Engineering from Fudan University.
+I am an MSc student in Computer Science and Technology at the Chinese Academy
+of Sciences. Before that I received my BSc in Communication Engineering from
+Fudan University.
 
 My interests sit at the intersection of multimodal learning and audio
 understanding, along with efficient adaptation of large models. I also enjoy

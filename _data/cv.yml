@@ -4,9 +4,9 @@ cv:
   email: ziyangchen21@m.fudan.edu.cn, chenziyang251@mails.ucas.ac.cn
   website: https://github.com/21White
   summary: >
-    MSc student at the Institute of Automation, Chinese Academy of Sciences,
-    working on multimodal learning and audio understanding. Previously studied
-    information and communication engineering at Fudan University.
+    MSc student at the Chinese Academy of Sciences, working on multimodal
+    learning and audio understanding. Previously studied communication
+    engineering at Fudan University.
 
   social_networks:
     - network: GitHub
@@ -14,9 +14,9 @@ cv:
 
   sections:
     Education:
-      - institution: Institute of Automation, Chinese Academy of Sciences
+      - institution: Chinese Academy of Sciences
         location: Beijing, China
-        url: http://www.ia.cas.cn/
+        url: https://www.cas.cn/
         area: Computer Science and Technology
         studyType: MSc
         start_date: 2025-09
@@ -25,7 +25,7 @@ cv:
       - institution: Fudan University
         location: Shanghai, China
         url: https://www.fudan.edu.cn/
-        area: Information and Communication Engineering
+        area: Communication Engineering
         studyType: BSc
         start_date: 2021-09
         end_date: 2025-06
