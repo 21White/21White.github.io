@@ -18,21 +18,28 @@
 
 ## 本地预览
 
-需要 Docker，不用装 Ruby：
+需要 Docker，不用装 Ruby。容器内 Jekyll 固定监听 8080，把它映射到宿主机一个空闲端口即可
+（这台开发机的 8080 长期被别的服务占用，所以用 4001）：
 
 ```bash
-docker compose up
-```
-
-然后打开 <http://localhost:8080>。改动会自动重建，刷新即可看到。结束后 `Ctrl-C`，或者 `docker compose down`。
-
-如果环境里没有 compose 插件，等价的原始命令是：
-
-```bash
-docker run --rm --name alfolio -p 8080:8080 -v "$PWD":/srv/jekyll \
+docker run --rm --name alfolio -p 4001:8080 -v "$PWD":/srv/jekyll \
   -e JEKYLL_ENV=development amirpourmand/al-folio:latest \
   /srv/jekyll/bin/entry_point.sh
 ```
+
+改动会自动重建，刷新浏览器即可看到。结束用 `Ctrl-C`，或另开终端 `docker rm -f alfolio`。
+
+装了 compose 插件的话，`docker compose up` 也可以，但它按 `docker-compose.yml` 走 8080:8080。
+
+### 在远程开发机上预览
+
+服务器上的 `localhost:4001` 不等于你本机的 `localhost:4001`，需要先打通网络，任选一种：
+
+- Cursor / VS Code 底部 **PORTS** 面板手动 Forward 端口 `4001`
+- 直接访问服务器内网地址 `http://<服务器IP>:4001`
+- 本机开隧道：`ssh -N -L 4001:localhost:4001 <user>@<服务器IP>`
+
+验证服务本身是否正常，在服务器上跑 `curl -I http://localhost:4001`，返回 200 就说明站点没问题，打不开纯属转发没通。
 
 ## 部署
 
