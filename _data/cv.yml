@@ -29,11 +29,13 @@ cv:
         studyType: BSc
         start_date: 2021-09
         end_date: 2025-06
+        # Images must be inline elements: kramdown escapes block-level tags
+        # such as <div> when they appear inside a paragraph.
         highlights:
           - >
-            Advised by [Prof. Jiuchun Ren](https://fit.fudan.edu.cn/Data/View/1049).
-            <img src="/assets/img/with_ren_1.jpg" alt="With Prof. Jiuchun Ren at graduation"
-            style="display:block;max-width:min(100%,260px);border-radius:6px;margin:.6rem 0 .2rem">
+            Advised by [Prof. Jiuchun Ren](https://fit.fudan.edu.cn/Data/View/1049).<br>
+            <img src="/assets/img/with_ren_1.jpg" alt="With Prof. Jiuchun Ren at graduation" style="display:inline-block;width:min(45%,200px);border-radius:6px;margin:.6rem .4rem .2rem 0;vertical-align:top">
+            <img src="/assets/img/with_ren_2.jpg" alt="Paying playful respects to my advisor at graduation" style="display:inline-block;width:min(45%,200px);border-radius:6px;margin:.6rem 0 .2rem;vertical-align:top">
 
       - institution: Liupanshui No.1 Experimental Middle School
         location: Liupanshui, Guizhou, China

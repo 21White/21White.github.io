@@ -30,11 +30,12 @@ cv:
         studyType: 本科
         start_date: 2021-09
         end_date: 2025-06
+        # 图片只能用内联元素：kramdown 会把段落内的 <div> 之类块级标签转义成文本。
         highlights:
           - >
-            本科导师为 [任久春](https://fit.fudan.edu.cn/Data/View/1049) 老师。
-            <img src="/assets/img/with_ren_1.jpg" alt="毕业时与任久春老师合影"
-            style="display:block;max-width:min(100%,260px);border-radius:6px;margin:.6rem 0 .2rem">
+            本科导师为 [任久春](https://fit.fudan.edu.cn/Data/View/1049) 老师。<br>
+            <img src="/assets/img/with_ren_1.jpg" alt="毕业时与任久春老师合影" style="display:inline-block;width:min(45%,200px);border-radius:6px;margin:.6rem .4rem .2rem 0;vertical-align:top">
+            <img src="/assets/img/with_ren_2.jpg" alt="毕业时向任老师行拜师礼" style="display:inline-block;width:min(45%,200px);border-radius:6px;margin:.6rem 0 .2rem;vertical-align:top">
 
       - institution: 六盘水市第一实验中学（原水城矿务局第一中学）
         location: 贵州 六盘水
