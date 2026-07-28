@@ -57,6 +57,14 @@ al-folio v1.x 的模板打包在 gem 里，本地同名文件会覆盖它。为�
 - `CV/` 目录已在 `.gitignore` 中，用于存放**未脱敏**的简历原件，不会被提交。
   要对外提供 PDF 版简历，请先删掉手机号等私密信息，再放到 `assets/pdf/`，
   并在 `_data/socials.yml` 的 `cv_pdf` 与 `_pages/cv.md` 里填路径。
+- `Figure/` 同样已忽略，放原图。上站的图片请压缩后放 `assets/img/`：
+
+  ```bash
+  magick Figure/原图.jpg -resize 1000x -strip -quality 86 assets/img/名字.jpg
+  ```
+
+  CV 里的配图直接写在 `highlights` 条目内（该字段会走 markdownify，可混用 Markdown
+  链接和 `<img>`），因此不必改模板。用 `style="max-width:min(100%,300px)"` 之类限制宽度。
 - 实习内容按方向描述，不写内部模型名、性能对比数字和同事姓名。
 
 ## 本地预览

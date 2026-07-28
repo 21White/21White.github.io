@@ -29,6 +29,25 @@ cv:
         studyType: BSc
         start_date: 2021-09
         end_date: 2025-06
+        highlights:
+          - >
+            Advised by [Prof. Jiuchun Ren](https://fit.fudan.edu.cn/Data/View/1049).
+            <img src="/assets/img/with_ren_1.jpg" alt="With Prof. Jiuchun Ren at graduation"
+            style="display:block;max-width:min(100%,260px);border-radius:6px;margin:.6rem 0 .2rem">
+
+      - institution: Liupanshui No.1 Experimental Middle School
+        location: Liupanshui, Guizhou, China
+        area: Science Track
+        studyType: High School
+        start_date: 2018-09
+        end_date: 2021-06
+        highlights:
+          - >
+            My mathematics teacher and mentor was
+            [Ms. Lili Tang](https://baike.baidu.com/item/%E5%94%90%E8%8E%89%E8%8E%89/9994663),
+            whose first disciple I am glad to be.
+            <img src="/assets/img/with_tang.jpg" alt="Back at my high school with Ms. Lili Tang"
+            style="display:block;max-width:min(100%,300px);border-radius:6px;margin:.6rem 0 .2rem">
 
     Experience:
       - company: Tencent Hunyuan

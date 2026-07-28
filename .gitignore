@@ -2,6 +2,9 @@
 # assets/pdf/ after stripping phone number and other private details.
 CV/
 
+# Full-resolution originals. Web-sized copies live in assets/img/.
+Figure/
+
 _site
 .bundle
 .DS_store
