@@ -2,6 +2,8 @@
 layout: default
 permalink: /blog/
 title: blog
+title_zh: 博客
+lang: all # shown in both the English and Chinese menus
 nav: true
 nav_order: 2
 pagination:

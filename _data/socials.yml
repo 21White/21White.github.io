@@ -4,11 +4,11 @@
 # Uncomment a line and fill in the value to show that icon. Leaving a key
 # present but empty breaks the build, so keep unused ones commented out.
 #
+# Both addresses are listed on the CV page; this one drives the mail icon.
+email: chenziyang251@mails.ucas.ac.cn
+github_username: 21White
 # cv_pdf: /assets/pdf/cv.pdf
-# email: you@example.com
-# github_username: YOUR-GITHUB-USERNAME
-# linkedin_username: your-linkedin-handle
 # scholar_userid: your-google-scholar-id
 # orcid_id: 0000-0000-0000-0000
-# x_username: your-x-handle
+# linkedin_username: your-linkedin-handle
 rss_icon: true # comment this line to hide the RSS icon

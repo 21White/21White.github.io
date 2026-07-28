@@ -1,67 +1,110 @@
 cv:
-  name: Lanchen Li
-  label: # e.g. PhD Student in Computer Science
-  email: # your email address
-  location: # e.g. Beijing, China
-  image: ""
-  summary: A one- or two-sentence summary of who you are and what you work on.
+  name: Ziyang Chen
+  label: MSc Student in Computer Science
+  email: ziyangchen21@m.fudan.edu.cn, chenziyang251@mails.ucas.ac.cn
+  website: https://github.com/21White
+  summary: >
+    MSc student at the Institute of Automation, Chinese Academy of Sciences,
+    working on multimodal learning and audio understanding. Previously studied
+    information and communication engineering at Fudan University.
 
   social_networks:
     - network: GitHub
-      username: YOUR-GITHUB-USERNAME
-    # - network: LinkedIn
-    #   username: your-linkedin-handle
-
-  # The `address` block feeds the rendercv layout. Delete it if you would
-  # rather not publish a postal address.
-  # address:
-  #   street:
-  #   city:
-  #   region:
-  #   postalCode:
-  #   countryCode:
+      username: 21White
 
   sections:
     Education:
-      - institution: Your University
-        location: City, Country
-        url: https://example.edu/
-        area: Your Field
-        studyType: PhD # or MSc, BSc
-        start_date: 2024
+      - institution: Institute of Automation, Chinese Academy of Sciences
+        location: Beijing, China
+        url: http://www.ia.cas.cn/
+        area: Computer Science and Technology
+        studyType: MSc
+        start_date: 2025-09
         end_date: present
-        score: ""
-        courses: ""
-        highlights:
-          - Advisor, thesis topic, or anything worth calling out.
 
-      - institution: Your Undergraduate University
-        location: City, Country
-        area: Your Field
+      - institution: Fudan University
+        location: Shanghai, China
+        url: https://www.fudan.edu.cn/
+        area: Information and Communication Engineering
         studyType: BSc
-        start_date: 2020
-        end_date: 2024
+        start_date: 2021-09
+        end_date: 2025-06
 
     Experience:
-      - company: Company or Lab Name
-        position: Research Intern
-        location: City, Country
-        start_date: 2025-06
-        end_date: 2025-12
-        summary: One sentence on what the role involved.
+      - company: Tencent Hunyuan
+        position: Algorithm Intern, Multimodal Group
+        location: Beijing, China
+        start_date: 2026-03
+        end_date: present
         highlights:
-          - A concrete thing you built or shipped.
-          - Another concrete outcome.
+          - Audio and multimodal understanding for large-scale production pipelines.
+
+      - company: Development Research Center of the Shanghai Municipal People's Government
+        position: Policy Research Intern, AI and Emerging Technologies
+        location: Shanghai, China
+        start_date: 2024-07
+        end_date: 2025-01
+        highlights:
+          - Contributed to 20+ industry analyses and policy briefs on the AI sector.
+          - Led two in-depth studies; recommendations from one were formally endorsed by
+            a municipal official and taken into departmental review.
+
+    Projects:
+      - name: UCAS Course Evaluation Helper
+        summary: >
+          An open-source browser userscript that reduces a recurring
+          multi-step course evaluation workflow to a single click. Built with
+          JavaScript and DOM automation; adapted within 24 hours of upstream
+          system changes. 100+ stars on GitHub and widely installed via GreasyFork.
+        start_date: 2025-11
+        end_date: present
+        highlights:
+          - https://github.com/21White/UCAS-Course-Evaluate-SillyTool
+
+      - name: Domain-Specific LLM Fine-Tuning and Intelligent Teaching System
+        summary: >
+          Core contributor on a Fudan University "MoE-Huawei" Intelligent Base
+          program project. Applied LoRA/QLoRA parameter-efficient fine-tuning in
+          PyTorch with a dual-channel architecture, cutting training cost by over
+          40%. Built a 100k-term domain knowledge base, raising BLEU-4 from 10.0%
+          to 36.1% and reducing response latency from 3.2s to 1.2s. Deployed to
+          both cloud (Open-WebUI) and on-device (PocketPal) targets.
+        start_date: 2025-01
+        end_date: 2025-06
+
+      - name: Multimodal Student Posture Recognition System
+        summary: >
+          Core contributor. Fused MoveNet-based visual pose estimation with
+          pressure-sensor data on an Intel edge platform, building a TensorFlow
+          model for real-time detection of unhealthy sitting postures. Delivered
+          the full embedded pipeline from multi-sensor acquisition through
+          on-device inference to audio and mobile push alerts.
+        start_date: 2024-03
+        end_date: 2024-07
+
+    Awards:
+      - title: Third Prize (National), Intel Cup
+        date: 2024
+        awarder: National Undergraduate Electronic Design Contest
+        summary: Awarded for the multimodal student posture recognition system.
+
+      - title: Shanghai Development Research First-Class Scholarship
+        date: 2024
+        awarder: Development Research Center of the Shanghai Municipal People's Government
+        summary: Sole undergraduate recipient that year among graduate-student interns.
 
     Skills:
       - name: Programming
-        level: # Beginner / Intermediate / Advanced / Master
         icon: fa-solid fa-code
-        keywords: "Python, C++, Bash"
+        keywords: "Python, JavaScript, C++"
 
-      - name: Tools
+      - name: Frameworks and Tools
         icon: fa-solid fa-screwdriver-wrench
-        keywords: "PyTorch, Git, Docker, Linux"
+        keywords: "PyTorch, TensorFlow, Git, Docker, Linux"
+
+      - name: Methods
+        icon: fa-solid fa-flask
+        keywords: "Parameter-efficient fine-tuning (LoRA/QLoRA), multimodal modeling, edge deployment"
 
     Languages:
       - name: Chinese
@@ -73,4 +116,4 @@ cv:
     Interests:
       - name: Research Interests
         icon: fa-solid fa-tag
-        keywords: "List a few broad areas here"
+        keywords: "Multimodal learning, audio understanding, efficient fine-tuning of large models"

@@ -1,3 +1,7 @@
+# Source CV files kept locally only. Anything published must go through
+# assets/pdf/ after stripping phone number and other private details.
+CV/
+
 _site
 .bundle
 .DS_store

@@ -1,0 +1,116 @@
+cv:
+  name: 陈子扬
+  label: 中国科学院自动化研究所 硕士研究生
+  email: ziyangchen21@m.fudan.edu.cn, chenziyang251@mails.ucas.ac.cn
+  website: https://github.com/21White
+  summary: >
+    中国科学院自动化研究所计算机科学与技术硕士研究生，研究方向为多模态学习与音频理解。
+    本科毕业于复旦大学信息与通信工程专业。
+
+  social_networks:
+    - network: GitHub
+      username: 21White
+
+  # 小节的 key 保持英文，渲染时会自动翻译成中文标题，
+  # 这样中英文两份 CV 共用同一套渲染模板。
+  sections:
+    Education:
+      - institution: 中国科学院自动化研究所
+        location: 北京
+        url: http://www.ia.cas.cn/
+        area: 计算机科学与技术
+        studyType: 硕士
+        start_date: 2025-09
+        end_date: 至今 # rendered as-is by the theme's date helper
+
+      - institution: 复旦大学
+        location: 上海
+        url: https://www.fudan.edu.cn/
+        area: 信息与通信工程
+        studyType: 本科
+        start_date: 2021-09
+        end_date: 2025-06
+
+    Experience:
+      - company: 腾讯混元
+        position: 多模态部 算法实习生
+        location: 北京
+        start_date: 2026-03
+        end_date: 至今
+        highlights:
+          - 负责音频与多模态理解方向的算法工作。
+
+      - company: 上海市人民政府发展研究中心
+        position: 政策研究实习生（人工智能与前沿科技领域）
+        location: 上海
+        start_date: 2024-07
+        end_date: 2025-01
+        highlights:
+          - 参与撰写 20 余份产业分析与政策建议报告。
+          - 主导完成 2 份深度调研，其中 1 份关于人工智能产业创新路径的报告所提建议获分管领导书面批示，并转入部门实务研讨。
+
+    Projects:
+      - name: UCAS 课程评估自动化工具
+        summary: >
+          个人开源项目。针对每学期重复的课程评估流程，独立设计并开发浏览器用户脚本，
+          将原本耗时数十分钟的手动操作优化为一键自动填写。使用 JavaScript 通过 DOM
+          解析与操作实现表单智能填充，在教务系统更新后 24 小时内完成适配。
+          项目在 GitHub 获得 100+ Star，并在 GreasyFork 平台广泛安装。
+        start_date: 2025-11
+        end_date: 至今
+        highlights:
+          - https://github.com/21White/UCAS-Course-Evaluate-SillyTool
+
+      - name: 领域大模型微调与智能教学系统
+        summary: >
+          核心负责人，复旦大学「教育部—华为」智能基座产教融合协同育人基地重点项目。
+          采用 LoRA/QLoRA 高效微调技术，基于 PyTorch 设计双通道微调架构，
+          训练资源消耗降低 40% 以上；构建 10 万+ 术语的领域知识库，
+          BLEU-4 由 10.0% 提升至 36.1%，响应时间由 3.2 秒优化至 1.2 秒；
+          完成云端（Open-WebUI）与本地（PocketPal）的混合部署。
+        start_date: 2025-01
+        end_date: 2025-06
+
+      - name: 多模态学生姿态识别与监测系统
+        summary: >
+          核心负责人。基于英特尔边缘计算平台，融合视觉（MoveNet 姿态估计）与压力传感数据，
+          使用 TensorFlow 构建多模态识别模型，实现对驼背、侧坐等不规范坐姿的实时检测；
+          主导完成从多传感器数据采集、模型推理到实时音频提醒与消息推送的端到端嵌入式系统。
+        start_date: 2024-03
+        end_date: 2024-07
+
+    Awards:
+      - title: 全国大学生电子设计竞赛「英特尔杯」全国三等奖
+        date: 2024
+        awarder: 全国大学生电子设计竞赛组委会
+        summary: 获奖作品为多模态学生姿态识别与监测系统。
+
+      - title: 上海市发展研究一等奖学金
+        date: 2024
+        awarder: 上海市人民政府发展研究中心
+        summary: 为同期实习生中唯一获奖的本科生。
+
+    Skills:
+      - name: 编程语言
+        icon: fa-solid fa-code
+        keywords: "Python、JavaScript、C++"
+
+      - name: 框架与工具
+        icon: fa-solid fa-screwdriver-wrench
+        keywords: "PyTorch、TensorFlow、Git、Docker、Linux"
+
+      - name: 技术方向
+        icon: fa-solid fa-flask
+        keywords: "大模型高效微调（LoRA/QLoRA）、多模态建模、边缘部署"
+
+    Languages:
+      - name: 中文
+        summary: "母语"
+
+      - name: 英语
+        summary: "熟练"
+
+    Interests:
+      - name: 研究兴趣
+        icon: fa-solid fa-tag
+        keywords: "多模态学习、音频理解、大模型高效微调"

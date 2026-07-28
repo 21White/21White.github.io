@@ -2,16 +2,17 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Your Affiliation</a>. Your Department. Your City.
+lang: en
+lang_alt: /zh/
+subtitle: MSc student at the <a href='http://www.ia.cas.cn/'>Institute of Automation, Chinese Academy of Sciences</a>.
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Your Lab / Office</p>
-    <p>Your Institution</p>
-    <p>Your City, Country</p>
+    <p>Institute of Automation, CAS</p>
+    <p>Beijing, China</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,12 +28,16 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi, I'm Lanchen Li. Write a short introduction here: where you study or work, what
-you spend your days on, and what you find interesting. Two or three paragraphs is
-usually plenty for a homepage.
+I am an MSc student in Computer Science and Technology at the Institute of
+Automation, Chinese Academy of Sciences. Before that I received my BSc in
+Information and Communication Engineering from Fudan University.
 
-A good second paragraph covers your background — where you studied, what you worked
-on before, and how you ended up doing what you do now.
+My interests sit at the intersection of multimodal learning and audio
+understanding, along with efficient adaptation of large models. I also enjoy
+taking ideas all the way to something that runs — whether that means squeezing a
+model onto an edge device or writing a small tool that saves people a tedious
+afternoon.
 
-Feel free to end with how people can reach you. Email is linked in the icons below,
-along with any other profiles you decide to add.
+I am currently an algorithm intern with the multimodal group at Tencent Hunyuan.
+Feel free to reach out by email; you can also find my code on
+[GitHub](https://github.com/21White).
