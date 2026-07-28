@@ -1,0 +1,10 @@
+# Shown on the /repositories/ page (disabled in the navbar by default).
+# Add your GitHub username and the repos you want to feature, then set
+# `nav: true` in _pages/repositories.md.
+github_users:
+  # - YOUR-GITHUB-USERNAME
+
+repo_description_lines_max: 2
+
+github_repos:
+  # - YOUR-GITHUB-USERNAME/some-repo

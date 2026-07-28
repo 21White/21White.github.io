@@ -1,0 +1,6 @@
+# Links co-author names in the publication list to their homepages.
+# Keys are lowercase last names. Example:
+#
+# "smith":
+#   - firstname: ["Jane", "J."]
+#     url: https://jane-smith.example.com

@@ -1,0 +1,76 @@
+cv:
+  name: Lanchen Li
+  label: # e.g. PhD Student in Computer Science
+  email: # your email address
+  location: # e.g. Beijing, China
+  image: ""
+  summary: A one- or two-sentence summary of who you are and what you work on.
+
+  social_networks:
+    - network: GitHub
+      username: YOUR-GITHUB-USERNAME
+    # - network: LinkedIn
+    #   username: your-linkedin-handle
+
+  # The `address` block feeds the rendercv layout. Delete it if you would
+  # rather not publish a postal address.
+  # address:
+  #   street:
+  #   city:
+  #   region:
+  #   postalCode:
+  #   countryCode:
+
+  sections:
+    Education:
+      - institution: Your University
+        location: City, Country
+        url: https://example.edu/
+        area: Your Field
+        studyType: PhD # or MSc, BSc
+        start_date: 2024
+        end_date: present
+        score: ""
+        courses: ""
+        highlights:
+          - Advisor, thesis topic, or anything worth calling out.
+
+      - institution: Your Undergraduate University
+        location: City, Country
+        area: Your Field
+        studyType: BSc
+        start_date: 2020
+        end_date: 2024
+
+    Experience:
+      - company: Company or Lab Name
+        position: Research Intern
+        location: City, Country
+        start_date: 2025-06
+        end_date: 2025-12
+        summary: One sentence on what the role involved.
+        highlights:
+          - A concrete thing you built or shipped.
+          - Another concrete outcome.
+
+    Skills:
+      - name: Programming
+        level: # Beginner / Intermediate / Advanced / Master
+        icon: fa-solid fa-code
+        keywords: "Python, C++, Bash"
+
+      - name: Tools
+        icon: fa-solid fa-screwdriver-wrench
+        keywords: "PyTorch, Git, Docker, Linux"
+
+    Languages:
+      - name: Chinese
+        summary: "Native speaker"
+
+      - name: English
+        summary: "Professional working proficiency"
+
+    Interests:
+      - name: Research Interests
+        icon: fa-solid fa-tag
+        keywords: "List a few broad areas here"

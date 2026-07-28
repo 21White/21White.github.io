@@ -1,0 +1,6 @@
+# Gives each venue abbreviation used in papers.bib a link and a badge color.
+# Example:
+#
+# "NeurIPS":
+#   url: https://neurips.cc/
+#   color: "#00369f"
