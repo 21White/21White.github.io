@@ -30,12 +30,15 @@ cv:
         studyType: 本科
         start_date: 2021-09
         end_date: 2025-06
-        # 图片只能用内联元素：kramdown 会把段落内的 <div> 之类块级标签转义成文本。
+        # <details> 必须独占一个 highlight 条目：kramdown 只在块首把块级 HTML
+        # 当作标签处理，跟在文字后面时会被转义成字面文本。
         highlights:
+          - 本科导师为 [任久春](https://fit.fudan.edu.cn/Data/View/1049) 老师。
           - >
-            本科导师为 [任久春](https://fit.fudan.edu.cn/Data/View/1049) 老师。<br>
-            <img src="/assets/img/with_ren_1.jpg" alt="毕业时与任久春老师合影" style="display:inline-block;width:min(45%,200px);border-radius:6px;margin:.6rem .4rem .2rem 0;vertical-align:top">
-            <img src="/assets/img/with_ren_2.jpg" alt="毕业时向任老师行拜师礼" style="display:inline-block;width:min(45%,200px);border-radius:6px;margin:.6rem 0 .2rem;vertical-align:top">
+            <details><summary style="cursor:pointer">查看合影</summary>
+            <img src="/assets/img/with_ren_1.jpg" alt="毕业时与任久春老师合影" style="display:inline-block;width:min(45%,200px);border-radius:6px;margin:.5rem .4rem .2rem 0;vertical-align:top">
+            <img src="/assets/img/with_ren_2.jpg" alt="毕业时向任老师行拜师礼" style="display:inline-block;width:min(45%,200px);border-radius:6px;margin:.5rem 0 .2rem;vertical-align:top">
+            </details>
 
       - institution: 六盘水市第一实验中学（原水城矿务局第一中学）
         location: 贵州 六盘水
@@ -47,8 +50,10 @@ cv:
           - >
             数学恩师为 [唐莉莉](https://baike.baidu.com/item/%E5%94%90%E8%8E%89%E8%8E%89/9994663)
             老师，我是老唐的唐门大弟子。
-            <img src="/assets/img/with_tang.jpg" alt="毕业后回母校与唐莉莉老师合影"
-            style="display:block;max-width:min(100%,300px);border-radius:6px;margin:.6rem 0 .2rem">
+          - >
+            <details><summary style="cursor:pointer">查看合影</summary>
+            <img src="/assets/img/with_tang.jpg" alt="毕业后回母校与唐莉莉老师合影" style="display:block;max-width:min(100%,300px);border-radius:6px;margin:.5rem 0 .2rem">
+            </details>
 
     Experience:
       - company: 腾讯混元
@@ -58,15 +63,6 @@ cv:
         end_date: 至今
         highlights:
           - 负责音频与多模态理解方向的算法工作。
-
-      - company: 上海市人民政府发展研究中心
-        position: 政策研究实习生（人工智能与前沿科技领域）
-        location: 上海
-        start_date: 2024-07
-        end_date: 2025-01
-        highlights:
-          - 参与撰写 20 余份产业分析与政策建议报告。
-          - 主导完成 2 份深度调研，其中 1 份关于人工智能产业创新路径的报告所提建议获分管领导书面批示，并转入部门实务研讨。
 
     Projects:
       - name: UCAS 课程评估自动化工具

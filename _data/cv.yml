@@ -29,16 +29,21 @@ cv:
         studyType: BSc
         start_date: 2021-09
         end_date: 2025-06
-        # Images must be inline elements: kramdown escapes block-level tags
-        # such as <div> when they appear inside a paragraph.
+        # A <details> block must start its own highlight entry: kramdown only
+        # treats block-level HTML as markup at the start of a block, and
+        # escapes it into literal text when it follows inline text.
         highlights:
+          - Advised by [Prof. Jiuchun Ren](https://fit.fudan.edu.cn/Data/View/1049).
           - >
-            Advised by [Prof. Jiuchun Ren](https://fit.fudan.edu.cn/Data/View/1049).<br>
-            <img src="/assets/img/with_ren_1.jpg" alt="With Prof. Jiuchun Ren at graduation" style="display:inline-block;width:min(45%,200px);border-radius:6px;margin:.6rem .4rem .2rem 0;vertical-align:top">
-            <img src="/assets/img/with_ren_2.jpg" alt="Paying playful respects to my advisor at graduation" style="display:inline-block;width:min(45%,200px);border-radius:6px;margin:.6rem 0 .2rem;vertical-align:top">
+            <details><summary style="cursor:pointer">Photos</summary>
+            <img src="/assets/img/with_ren_1.jpg" alt="With Prof. Jiuchun Ren at graduation" style="display:inline-block;width:min(45%,200px);border-radius:6px;margin:.5rem .4rem .2rem 0;vertical-align:top">
+            <img src="/assets/img/with_ren_2.jpg" alt="Paying playful respects to my advisor at graduation" style="display:inline-block;width:min(45%,200px);border-radius:6px;margin:.5rem 0 .2rem;vertical-align:top">
+            </details>
 
-      - institution: Liupanshui No.1 Experimental Middle School
-        location: Liupanshui, Guizhou, China
+      - institution: Liupanshui No.1 Experimental High School
+        # The date column is only ~104px wide, so this one needs a manual break.
+        # `location` is emitted unescaped, so inline HTML works here.
+        location: Liupanshui,<br>China
         area: Science Track
         studyType: High School
         start_date: 2018-09
@@ -48,8 +53,10 @@ cv:
             My mathematics teacher and mentor was
             [Ms. Lili Tang](https://baike.baidu.com/item/%E5%94%90%E8%8E%89%E8%8E%89/9994663),
             whose first disciple I am glad to be.
-            <img src="/assets/img/with_tang.jpg" alt="Back at my high school with Ms. Lili Tang"
-            style="display:block;max-width:min(100%,300px);border-radius:6px;margin:.6rem 0 .2rem">
+          - >
+            <details><summary style="cursor:pointer">Photo</summary>
+            <img src="/assets/img/with_tang.jpg" alt="Back at my high school with Ms. Lili Tang" style="display:block;max-width:min(100%,300px);border-radius:6px;margin:.5rem 0 .2rem">
+            </details>
 
     Experience:
       - company: Tencent Hunyuan
@@ -59,16 +66,6 @@ cv:
         end_date: present
         highlights:
           - Audio and multimodal understanding for large-scale production pipelines.
-
-      - company: Development Research Center of the Shanghai Municipal People's Government
-        position: Policy Research Intern, AI and Emerging Technologies
-        location: Shanghai, China
-        start_date: 2024-07
-        end_date: 2025-01
-        highlights:
-          - Contributed to 20+ industry analyses and policy briefs on the AI sector.
-          - Led two in-depth studies; recommendations from one were formally endorsed by
-            a municipal official and taken into departmental review.
 
     Projects:
       - name: UCAS Course Evaluation Helper
