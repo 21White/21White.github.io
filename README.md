@@ -26,6 +26,14 @@ docker compose up
 
 然后打开 <http://localhost:8080>。改动会自动重建，刷新即可看到。结束后 `Ctrl-C`，或者 `docker compose down`。
 
+如果环境里没有 compose 插件，等价的原始命令是：
+
+```bash
+docker run --rm --name alfolio -p 8080:8080 -v "$PWD":/srv/jekyll \
+  -e JEKYLL_ENV=development amirpourmand/al-folio:latest \
+  /srv/jekyll/bin/entry_point.sh
+```
+
 ## 部署
 
 推到 `main` 分支后，`.github/workflows/deploy.yml` 会自动构建并把产物推到 `gh-pages` 分支。首次推送后需要去仓库 **Settings → Pages**，把 Source 设为 **Deploy from a branch**，分支选 **`gh-pages`**、目录选 `/ (root)`。

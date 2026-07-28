@@ -1,12 +1,14 @@
-# this file contains the social media links and usernames of the author
-# the socials will be displayed in the order they are defined here
-# for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
-# leave a field blank (or delete the line) to hide that icon
-cv_pdf: # path to your CV PDF file, e.g. /assets/pdf/cv.pdf
-email: # your email address
-github_username: # your GitHub username
-# linkedin_username: # your LinkedIn username
-# scholar_userid: # your Google Scholar ID
-# orcid_id: # your ORCID iD
-# x_username: # your X (Twitter) handle
+# Social icons shown under the profile picture, in the order defined here.
+# See https://github.com/george-gca/jekyll-socials for the full list of keys.
+#
+# Uncomment a line and fill in the value to show that icon. Leaving a key
+# present but empty breaks the build, so keep unused ones commented out.
+#
+# cv_pdf: /assets/pdf/cv.pdf
+# email: you@example.com
+# github_username: YOUR-GITHUB-USERNAME
+# linkedin_username: your-linkedin-handle
+# scholar_userid: your-google-scholar-id
+# orcid_id: 0000-0000-0000-0000
+# x_username: your-x-handle
 rss_icon: true # comment this line to hide the RSS icon

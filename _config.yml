@@ -6,8 +6,8 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Lanchen
 middle_name:
 last_name: Li
-contact_note: >
-  Email is the best way to reach me.
+contact_note: > # a short line shown under the social icons; leave blank to hide
+
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Personal homepage of Lanchen Li.
 footer_text: >
