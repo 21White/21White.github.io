@@ -31,13 +31,6 @@
   border-color: var(--global-theme-color);
 }
 
-.moments__empty {
-  padding-block: 1.5rem;
-  border-top: 1px solid var(--global-divider-color);
-  color: var(--global-text-color);
-  color: color-mix(in srgb, var(--global-text-color) 75%, var(--global-bg-color));
-}
-
 .moment {
   margin-bottom: 1rem;
   padding: clamp(1rem, 4vw, 1.5rem);
@@ -50,4 +43,23 @@
 
 .moment:target {
   border-color: var(--global-theme-color);
+}
+
+.moment__header {
+  display: grid;
+  gap: 0.375rem;
+}
+
+.moment__date {
+  width: fit-content;
+  color: var(--global-text-color);
+  color: color-mix(in srgb, var(--global-text-color) 75%, var(--global-card-bg-color));
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.moment__header h2 {
+  margin: 0;
+  font-size: 1.1875rem;
+  font-weight: 600;
 }
