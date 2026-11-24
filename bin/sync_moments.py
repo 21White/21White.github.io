@@ -12,6 +12,7 @@ from bs4 import BeautifulSoup
 
 
 TITLE_PREFIX = "[动态]"
+MOMENTS_LABEL = "moments"
 LOCAL_TIME = ZoneInfo("Asia/Shanghai")
 OUTPUT = Path(__file__).resolve().parents[1] / "_data" / "moments.json"
 
@@ -24,7 +25,10 @@ def collect_moments(pages, owner):
                 "pull_request" in issue
                 or issue["state"] != "open"
                 or (issue.get("user") or {}).get("login", "").lower() != owner.lower()
-                or not issue["title"].startswith(TITLE_PREFIX)
+            ):
+                continue
+            if not issue["title"].startswith(TITLE_PREFIX) and not any(
+                label["name"] == MOMENTS_LABEL for label in issue["labels"]
             ):
                 continue
 

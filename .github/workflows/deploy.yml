@@ -58,7 +58,7 @@ on:
       - "!docs/INSTALL.md"
       - "!README.md"
   issues:
-    types: [opened, edited, closed, reopened, deleted, transferred]
+    types: [opened, edited, closed, reopened, deleted, transferred, labeled, unlabeled]
   workflow_dispatch:
 
 permissions:
@@ -70,7 +70,9 @@ jobs:
     if: >-
       github.event_name != 'issues' ||
       (github.event.issue.user.login == github.repository_owner &&
-        (startsWith(github.event.issue.title, '[动态]') ||
+        (contains(github.event.issue.labels.*.name, 'moments') ||
+         github.event.label.name == 'moments' ||
+         startsWith(github.event.issue.title, '[动态]') ||
          startsWith(github.event.changes.title.from, '[动态]')))
     concurrency:
       group: ${{ github.event_name == 'pull_request' && format('pages-pr-{0}', github.event.number) || 'pages-deploy' }}

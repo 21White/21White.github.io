@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-{% assign prefix = '[动态]' | url_encode %}
 {% if page.lang == 'zh' %}
   {% assign publish_label = '站长发动态' %}
   {% assign empty_label = '还没有发布动态。' %}
@@ -16,7 +15,7 @@ layout: default
 <section class="moments" aria-labelledby="moments-heading">
   <header class="moments__header">
     <h1 id="moments-heading">{{ page.title }}</h1>
-    <a class="moments__publish" href="https://github.com/21White/21White.github.io/issues/new?title={{ prefix }}">
+    <a class="moments__publish" href="https://github.com/21White/21White.github.io/issues/new?labels=moments">
       {{- publish_label -}}
     </a>
   </header>
