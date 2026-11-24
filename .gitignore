@@ -11,6 +11,7 @@ _site
 .idea
 .jekyll-cache
 .jekyll-metadata
+/_data/moments.json
 .ruby-version
 .sass-cache
 .tweet-cache

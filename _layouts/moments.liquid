@@ -1,0 +1,52 @@
+---
+layout: default
+---
+{% assign prefix = '[动态]' | url_encode %}
+{% if page.lang == 'zh' %}
+  {% assign publish_label = '站长发动态' %}
+  {% assign empty_label = '还没有发布动态。' %}
+  {% assign photo_label = '查看照片' %}
+{% else %}
+  {% assign publish_label = 'Publish a moment (owner)' %}
+  {% assign empty_label = 'No moments yet.' %}
+  {% assign photo_label = 'View photo' %}
+{% endif %}
+
+<link rel="stylesheet" href="{{ '/assets/css/moments.css' | relative_url }}">
+<section class="moments" aria-labelledby="moments-heading">
+  <header class="moments__header">
+    <h1 id="moments-heading">{{ page.title }}</h1>
+    <a class="moments__publish" href="https://github.com/21White/21White.github.io/issues/new?title={{ prefix }}">
+      {{- publish_label -}}
+    </a>
+  </header>
+
+  {% for moment in site.data.moments %}
+    <article class="moment" id="moment-{{ moment.number }}">
+      <header class="moment__header">
+        <a class="moment__date" href="#moment-{{ moment.number }}">
+          <time datetime="{{ moment.created_at | escape }}">{{ moment.date | escape }}</time>
+        </a>
+        {% if moment.title != empty %}
+          <h2>{{ moment.title | escape }}</h2>
+        {% endif %}
+      </header>
+      {% if moment.body != empty %}
+        <div class="moment__body">
+          {{ moment.body }}
+        </div>
+      {% endif %}
+      {% if moment.photos.size > 0 %}
+        <div class="moment__gallery" data-count="{{ moment.photos.size }}">
+          {% for photo in moment.photos %}
+            <a href="{{ photo.src | escape }}">
+              <img src="{{ photo.src | escape }}" loading="lazy" decoding="async" alt="{{ photo.alt | default: photo_label | escape }}">
+            </a>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </article>
+  {% else %}
+    <p class="moments__empty">{{ empty_label }}</p>
+  {% endfor %}
+</section>

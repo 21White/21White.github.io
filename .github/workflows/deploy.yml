@@ -11,6 +11,7 @@ on:
       - "**.html"
       - "**.js"
       - "**.liquid"
+      - "bin/sync_moments.py"
       - "**/*.md"
       - "**.yml"
       - "Gemfile"
@@ -38,6 +39,7 @@ on:
       - "**.html"
       - "**.js"
       - "**.liquid"
+      - "bin/sync_moments.py"
       - "**/*.md"
       - "**.yml"
       - "Gemfile"
@@ -55,18 +57,31 @@ on:
       - "!docs/FAQ.md"
       - "!docs/INSTALL.md"
       - "!README.md"
+  issues:
+    types: [opened, edited, closed, reopened, deleted, transferred]
   workflow_dispatch:
 
 permissions:
   contents: write
+  issues: read
 
 jobs:
   deploy:
+    if: >-
+      github.event_name != 'issues' ||
+      (github.event.issue.user.login == github.repository_owner &&
+        (startsWith(github.event.issue.title, '[动态]') ||
+         startsWith(github.event.changes.title.from, '[动态]')))
+    concurrency:
+      group: ${{ github.event_name == 'pull_request' && format('pages-pr-{0}', github.event.number) || 'pages-deploy' }}
+      cancel-in-progress: false
     # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.ref || github.event.repository.default_branch }}
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
@@ -84,6 +99,18 @@ jobs:
           cache: "npm"
       - name: Install JS deps 📦
         run: npm ci
+      - name: Install Python deps
+        run: python -m pip install --upgrade nbconvert beautifulsoup4
+      - name: Sync moments
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          gh api --paginate --slurp --method GET \
+            -H 'Accept: application/vnd.github.html+json' \
+            "repos/$GITHUB_REPOSITORY/issues" \
+            -f state=open -f creator="$GITHUB_REPOSITORY_OWNER" -f per_page=100 \
+            | python bin/sync_moments.py
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:
@@ -94,7 +121,6 @@ jobs:
       - name: Install and Build 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
-          pip3 install --upgrade nbconvert
           export JEKYLL_ENV=production
           bundle exec jekyll build
       - name: Purge unused CSS 🧹

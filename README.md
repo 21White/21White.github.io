@@ -2,6 +2,14 @@
 
 基于 [al-folio](https://github.com/alshedivat/al-folio)（MIT）的中英双语个人主页，托管在 GitHub Pages。
 
+## 发动态
+
+1. 在主页打开「动态」→「站长发动态」，用 GitHub 的 `21White` 账号登录。
+2. 标题保留自动填好的 `[动态]`。可以只写正文，也可以在标记后加标题。用编辑框的附件按钮从相册选择照片，等上传结束后提交。
+3. [部署完成](https://github.com/21White/21White.github.io/actions/workflows/deploy.yml)后，图文会在中文版和英文版的动态页按发布时间倒序展示。
+
+修改原 Issue 会同步修改动态。关闭 Issue 会从主页撤下，重新打开会恢复。Issue 和上传的照片本身是公开的。
+
 ## 双语结构
 
 英文版在 `/`，中文版在 `/zh/`，导航栏右侧的「中文 / EN」按钮互相跳转。
